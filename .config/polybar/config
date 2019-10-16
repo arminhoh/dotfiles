@@ -21,7 +21,7 @@ secondary = ${xrdb:color1:#555}
 alert = ${xrdb:color1:#555}
 
 [bar/bar1]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR}
 width = 100%
 height = 36
 ;offset-x = 10%
@@ -29,7 +29,6 @@ offset-y = 50%
 ;radius = 6.0
 fixed-center = true
 
-monitor = eDP
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -119,7 +118,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.foreground}
@@ -131,15 +130,14 @@ label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.secondary}
 label-focused-padding = 2
 
- unfocused = Inactive workspace on any monitor
+unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-;label-visible = %index%
-;label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
-;label-visible-padding = ${self.label-focused-padding}
+label-visible = %index%
+label-visible-background = ${colors.background-alt}
+label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
@@ -352,6 +350,7 @@ ramp-capacity-6 = 
 ramp-capacity-7 = 
 ramp-capacity-8 = 
 ramp-capacity-9 = 
+
 ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 = 

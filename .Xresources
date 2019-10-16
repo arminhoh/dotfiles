@@ -21,10 +21,11 @@ URxvt.iso14755: false
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #aa10151b, #aa10151b, #d3ebe9
-rofi.color-normal: #aa10151b, #d3ebe9, #aa0a0f14, #781f36, #d3ebe9
-rofi.color-active: #aa10151b, #d3ebe9, #aa0a0f14, #781f36, #d3ebe9
-rofi.color-urgent: #aa10151b, #d3ebe9, #aa0a0f14, #781f36, #d3ebe9
+rofi.color-window: #10151b, #aa10151b, #d3ebe9
+rofi.color-normal: #10151b, #d3ebe9, #aa10151b, #781f36, #d3ebe9
+rofi.color-active: #10151b, #d3ebe9, #aa10151b, #781f36, #d3ebe9
+rofi.color-urgent: #10151b, #d3ebe9, #aa10151b, #781f36, #d3ebe9
+! #781f36
 rofi.font: Source Code Pro  13
 
 
