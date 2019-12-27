@@ -1,0 +1,34 @@
+alias gcc99="gcc -std=c99 -Wall -Werror -lm"
+alias c="xsel -b | xsel"
+alias zid="ssh csaw4226@zid-gpl.uibk.ac.at"
+alias oc="sudo openconnect -u csaw4226 vpn.uibk.ac.at"
+
+export PATH=${PATH}:/home/armin/bin
+
+eval $(keychain --eval --quiet id_rsa) 
+
+function crun {
+    name=$1
+    name=${name/.c/}
+    gcc99 ${name}.c -o ${name} && ./${name} "${@:2}"
+}
+
+function cbug {
+    name=$1
+    name=${name/.c/}
+    gcc99 -g ${name}.c -o ${name} 
+}
+
+function eidp-pack {
+    sheet=$(basename $(pwd))
+    sheet=${sheet/sheet/blatt}
+    tar -vczf 04-hohenegger-${sheet}.tar.gz a*.c a*.txt
+}
+
+
+    
+
+
+    
+
+

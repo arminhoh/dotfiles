@@ -5,16 +5,22 @@ URxvt.fading: 10
 URxvt.fadeColor: black
 !URxvt.pointerColor: black
 1URxvt.pointerColor2: white
-!URxvt.font: xft:SourceCodePro\\-Regular:size=10
-URxvt*font: xft:Source Code Pro:size=12.5
-URxvt*boldFont: xft:Source Code Pro:bold:size=12.5
-URxvt*italicFont: xft:Source Code Pro:italic:size=12.5
-URxvt*boldItalicFont: xft:Source Code Pro:bolditalic:size=12.5
-URxvt.letterSpace: -1
+URxvt*font: xft:SauceCodePro Nerd Font:size=12.5
+URxvt*boldFont: xft:SauceCodePro Nerd Font:bold
+URxvt*italicFont: xft:SauceCodePro Nerd Font:italic
+URxvt*boldItalicFont: xft:SauceCodePro Nerd Font:bolditalic
+!URxvt.letterSpace: -1
 URxvt.visualBell: true
 URxvt.scrollBar: false
 URxvt.iso14755_52: false
 URxvt.iso14755: false
+URxvt.perl-ext-common: font-size
+
+! font for emacs etc..
+emacs.font: SauceCodePro Nerd Font:size=13
+emacs.horizontalScrollBars: false
+emacs.verticalScrollBars: false
+emacs.borderWidth: 0
 
 
 ! ------------------------------------------------------------------------------
@@ -26,52 +32,14 @@ rofi.color-normal: #10151b, #d3ebe9, #aa10151b, #781f36, #d3ebe9
 rofi.color-active: #10151b, #d3ebe9, #aa10151b, #781f36, #d3ebe9
 rofi.color-urgent: #10151b, #d3ebe9, #aa10151b, #781f36, #d3ebe9
 ! #781f36
-rofi.font: Source Code Pro  13
+rofi.font: SauceCodePro Nerd Font 13
 
 
-
-! !urxvt color theme 
-
-! ! special
-! *.foreground:   #98d1ce
-! *.background:   #0a0f14
-! *.cursorColor:  #98d1ce
-
-! ! black
-! *.color0:       #0a0f14
-! *.color8:       #10151b
-
-! ! red
-! *.color1:       #781f36
-! *.color9:       #d26939
-
-! ! green
-! *.color2:       #26a98b
-! *.color10:      #081f2d
-
-! ! yellow
-! *.color3:       #edb54b
-! *.color11:      #245361
-
-! ! blue
-! *.color4:       #195465
-! *.color12:      #093748
-
-! ! magenta
-! *.color5:       #4e5165
-! *.color13:      #888ba5
-
-! ! cyan
-! *.color6:       #33859d
-! *.color14:      #599caa
-
-! ! white
-! *.color7:       #98d1ce
-! *.color15:      #d3ebe9
 
 ! special
 *.foreground:   #98d1ce
-*.background:   #0a0f14
+!*.background:   #0a0f14
+*.background:   #000002
 *.cursorColor:  #98d1ce
 
 ! black
