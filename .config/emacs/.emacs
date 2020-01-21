@@ -24,6 +24,7 @@
  '(custom-safe-themes
    (quote
     ("a185f85b239e0f6a5e325d701f37359b5da744b42faacc4f2c66d73bd9011128" "ee0afc03c263ba0eda6444765329f2a2376487e902f7af52ce09338ae4e3a0d8" "7c9e494a749abddfb6a59e9195e3f05af447da9fd8045e24d2b417261d972158" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
+ '(inhibit-startup-screen t)
  '(markdown-command
    "pandoc --highlight-style=haddock --self-contained --css=/home/armin/.local/share/markdown-css/tufte.css")
  '(menu-bar-mode nil)
@@ -46,14 +47,34 @@
 (require 'lsp)
 (require 'lsp-haskell)
 (require 'lsp-ui)
-(add-hook 'haskell-mode-hook #'lsp)
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+;;(add-hook 'haskell-mode-hook #'lsp)
+;;(add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 
 
 (set-face-attribute 'default nil :height 125)
 
+(defun sacha/increase-font-size ()
+  (interactive)
+  (set-face-attribute 'default
+                      nil
+                      :height
+                      (ceiling (* 1.10
+                                  (face-attribute 'default :height)))))
+(defun sacha/decrease-font-size ()
+  (interactive)
+  (set-face-attribute 'default
+                      nil
+                      :height
+                      (floor (* 0.9
+                                  (face-attribute 'default :height)))))
+(global-set-key (kbd "C-+") 'sacha/increase-font-size)
+(global-set-key (kbd "C--") 'sacha/decrease-font-size)
+
+
 
 (set-frame-parameter (selected-frame) 'alpha '(93 . 93))
+(if (display-graphic-p) 
+    (load-theme 'mytheme) 
+   (disable-theme 'mytheme))
 
-(load-theme 'mytheme)
