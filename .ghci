@@ -1,1 +1,2 @@
-:set prompt "%s λ  "
+:set editor emacs
+:set prompt "%s\ESC[38;5;202m\STX\ESC[1m\STX λ\ESC[m\STX  "
