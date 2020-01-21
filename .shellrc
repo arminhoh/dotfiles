@@ -5,7 +5,7 @@ alias oc="sudo openconnect -u csaw4226 vpn.uibk.ac.at"
 
 export PATH=${PATH}:/home/armin/bin
 
-eval $(keychain --eval --quiet id_rsa) 
+eval $(keychain --eval --quiet --noask id_rsa) 
 
 function crun {
     name=$1
@@ -25,6 +25,9 @@ function eidp-pack {
     tar -vczf 04-hohenegger-${sheet}.tar.gz a*.c a*.txt
 }
 
+function lms {
+    xdg-open https://lms.uibk.ac.at/Shibboleth.sso/Login\?SAMLDS\=1\&target\=https://lms.uibk.ac.at/shib/\&entityID\=https%3A%2F%2Fidp.uibk.ac.at%2Fidp%2Fshibboleth
+} 
 
     
 
