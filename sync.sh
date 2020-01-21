@@ -32,18 +32,18 @@ function import() {
     rsync -v ${st_files} ./pkg-build/st
     rsync -v ${dot_files} .
 }
-function export() {
-    config_files=${config_files//BASEDIR/.}
-    scripts=${scripts//BASEDIR/./scripts}
-    st_files=${st_files//BASEDIR/.}
-    dot_files=${dot_files//BASEDIR/.}}
+# function export() {
+#     config_files=${config_files//BASEDIR/.}
+#     scripts=${scripts//BASEDIR/./scripts}
+#     st_files=${st_files//BASEDIR/.}
+#     dot_files=${dot_files//BASEDIR/.}}
     
-    rsync -n -v --recursive ${config_files} ${HOME}/.config
-    rsync -v ./.Xresources ${HOME}
-    rsync -v ${scripts} ${HOME}/.local/bin
-    rsync -v ${st_files} ${HOME}/pkg-build/st
-    rsync -v ${dot_files} ${HOME}
-}
+#     rsync -n -v --recursive ${config_files} ${HOME}/.config
+#     rsync -v ./.Xresources ${HOME}
+#     rsync -v ${scripts} ${HOME}/.local/bin
+#     rsync -v ${st_files} ${HOME}/pkg-build/st
+#     rsync -v ${dot_files} ${HOME}
+# }
 
 case "$1" in
     -i|--import)
